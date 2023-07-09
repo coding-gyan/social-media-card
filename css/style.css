@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #080202;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 300px;
+  background: #0f0f0f;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.card__top .user__picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.card__top .user__picture img {
+  width: 100%;
+}
+
+.card__details {
+  margin-left: 8px;
+}
+
+.card__details .user__id {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.card__details .location {
+  font-size: 10px;
+}
+
+.card__top .popup {
+  position: absolute;
+  top: 24px;
+  left: 45px;
+  background: #ffffff0a;
+  z-index: 10000;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.card__top .popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card__top .popup .posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__top .popup .posts img {
+  width: 32%;
+  border-radius: 5px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 10px 0;
+}
+
+.stats .stats__box {
+  text-align: center;
+  width: 32%;
+  font-size: 10px;
+}
+
+.stats .stats__box .count {
+  font-size: 12px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  width: 49%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  background: rgba(24, 24, 24, 0.633);
+  color: white;
+  transition: background 0.4s;
+}
+
+.buttons button:hover {
+  background: rgba(24, 24, 24, 0.359);
+}
+
+.card__middle {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.card__middle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.card__options {
+  display: flex;
+  margin-top: 5px;
+}
+
+.card__options .option i {
+  font-size: 25px;
+  margin: 5px 5px;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+.card__options .option i:hover {
+  color: #5d5d5d;
+}
